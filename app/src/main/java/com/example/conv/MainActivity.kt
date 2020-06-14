@@ -5,9 +5,7 @@ import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
 fun check(str: String): Boolean{
     if(str == "") return false
-    for(i in str){
-        if( (i.toChar()<'0') or (i.toChar()>'9') ) return false;
-    }
+
     return true
 }
 
@@ -73,6 +71,11 @@ class MainActivity : AppCompatActivity() {
 
                 res.text = n.toString()
             } else res.text = "ERROR INPUT"
+        }
+        arrow.setOnClickListener {
+            var c = fs.text.toString()
+            fs.text = sd.text.toString()
+            sd.text = c
         }
     }
 }

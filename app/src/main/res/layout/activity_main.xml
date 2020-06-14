@@ -4,170 +4,211 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:accessibilityHeading="false"
     tools:context=".MainActivity">
-
-    <Button
-        android:id="@+id/usd1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="17dp"
-        android:text="USD"
-        app:layout_constraintBottom_toTopOf="@+id/eur1"
-        app:layout_constraintEnd_toStartOf="@+id/usd2"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/rub1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="RUB"
-        app:layout_constraintStart_toStartOf="@+id/eur1"
-        app:layout_constraintTop_toBottomOf="@+id/eur1" />
 
     <TextView
         android:id="@+id/ffrom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="108dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginBottom="25dp"
         android:text="FROM"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="@+id/scroll1"
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/uah1"
+    <ScrollView
+        android:id="@+id/scroll2"
+        android:layout_width="54dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="139dp"
+        android:layout_marginBottom="63dp"
+        app:layout_constraintBottom_toTopOf="@+id/calc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/ffrom"
+        app:layout_constraintTop_toTopOf="@+id/cnt">
+
+        <LinearLayout
+            android:id="@+id/linear2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#9CD8D8"
+            android:backgroundTint="#9CD8D8"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/rub2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RUB" />
+
+            <Button
+                android:id="@+id/uah2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="UAH" />
+
+            <Button
+                android:id="@+id/eur2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EUR" />
+
+            <Button
+                android:id="@+id/usd2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="USD" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/scroll1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/scroll2"
+        app:layout_constraintEnd_toStartOf="@+id/arrow"
+        app:layout_constraintStart_toEndOf="@+id/ffrom"
+        app:layout_constraintTop_toTopOf="@+id/scroll2">
+
+        <LinearLayout
+            android:id="@+id/linear1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#9CD8D8"
+            android:backgroundTint="#9CD8D8"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/uah1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="UAH" />
+
+            <Button
+                android:id="@+id/rub1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RUB" />
+
+            <Button
+                android:id="@+id/usd1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="USD" />
+
+            <Button
+                android:id="@+id/eur1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EUR" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/arrow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="UAH"
-        app:layout_constraintStart_toStartOf="@+id/rub1"
-        app:layout_constraintTop_toBottomOf="@+id/rub1" />
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="76dp"
+        app:layout_constraintBottom_toTopOf="@+id/res"
+        app:layout_constraintStart_toEndOf="@+id/fs"
+        app:srcCompat="?attr/actionModeCloseDrawable" />
 
     <TextView
         android:id="@+id/fs"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="44dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginEnd="20dp"
         android:text="(◕‿◕)"
-        app:layout_constraintEnd_toEndOf="@+id/uah1"
-        app:layout_constraintTop_toBottomOf="@+id/uah1" />
-
-    <Button
-        android:id="@+id/eur1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
-        android:text="EUR"
-        app:layout_constraintBottom_toBottomOf="@+id/ffrom"
-        app:layout_constraintStart_toStartOf="@+id/usd1" />
-
-    <Button
-        android:id="@+id/usd2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="5dp"
-        android:text="USD"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/usd1"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/sd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="(◕‿◕)"
-        app:layout_constraintStart_toStartOf="@+id/uah2"
-        app:layout_constraintTop_toBottomOf="@+id/uah2" />
-
-    <Button
-        android:id="@+id/rub2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="3dp"
-        android:text="RUB"
-        app:layout_constraintStart_toStartOf="@+id/eur2"
-        app:layout_constraintTop_toTopOf="@+id/tto" />
-
-    <Button
-        android:id="@+id/uah2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:text="UAH"
-        app:layout_constraintStart_toStartOf="@+id/rub2"
-        app:layout_constraintTop_toBottomOf="@+id/rub2" />
-
-    <Button
-        android:id="@+id/eur2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="EUR"
-        app:layout_constraintStart_toStartOf="@+id/usd2"
-        app:layout_constraintTop_toBottomOf="@+id/usd2" />
+        app:layout_constraintBottom_toBottomOf="@+id/arrow"
+        app:layout_constraintEnd_toStartOf="@+id/tto"
+        app:layout_constraintStart_toEndOf="@+id/rresult"
+        app:layout_constraintTop_toTopOf="@+id/arrow" />
 
     <TextView
         android:id="@+id/tto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="104dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="4dp"
         android:text="TO"
-        app:layout_constraintStart_toEndOf="@+id/eur2"
+        app:layout_constraintEnd_toStartOf="@+id/scroll2"
+        app:layout_constraintTop_toTopOf="@+id/scroll2" />
+
+    <TextView
+        android:id="@+id/sd"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="(◕‿◕)"
+        app:layout_constraintBottom_toBottomOf="@+id/arrow"
+        app:layout_constraintEnd_toEndOf="@+id/scroll2"
+        app:layout_constraintStart_toEndOf="@+id/arrow"
+        app:layout_constraintTop_toTopOf="@+id/arrow" />
+
+    <Button
+        android:id="@+id/calc"
+        android:layout_width="59dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="39dp"
+        android:layout_marginBottom="38dp"
+        android:text="CALC"
+        app:layout_constraintBottom_toBottomOf="@+id/res"
+        app:layout_constraintEnd_toEndOf="@+id/sd"
+        app:layout_constraintStart_toStartOf="@+id/scroll1"
+        app:layout_constraintTop_toTopOf="@+id/fs" />
+
+    <TextView
+        android:id="@+id/ccount"
+        android:layout_width="0dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="8dp"
+        android:cursorVisible="false"
+        android:text="COUNT"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintBaseline_toBaselineOf="@+id/cnt"
+        app:layout_constraintEnd_toStartOf="@+id/cnt"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/cnt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="158dp"
+        android:hint="ener your value"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ccount"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/rresult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="13dp"
+        android:layout_marginStart="14dp"
         android:text="RESULT"
-        app:layout_constraintStart_toEndOf="@+id/calc"
-        app:layout_constraintTop_toBottomOf="@+id/calc" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/res"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/res"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="268dp"
         android:text="0"
-        app:layout_constraintStart_toStartOf="@+id/rresult"
-        app:layout_constraintTop_toBottomOf="@+id/rresult" />
-
-    <TextView
-        android:id="@+id/ccount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:text="COUNT"
-        app:layout_constraintBottom_toBottomOf="@+id/rresult"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/rresult" />
-
-    <EditText
-        android:id="@+id/cnt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="0"
-        app:layout_constraintStart_toStartOf="@+id/ccount"
-        app:layout_constraintTop_toBottomOf="@+id/ccount" />
-
-    <Button
-        android:id="@+id/calc"
-        android:layout_width="68dp"
-        android:layout_height="51dp"
-        android:text="CALC"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.615" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="->"
-        app:layout_constraintBaseline_toBaselineOf="@+id/fs"
-        app:layout_constraintStart_toEndOf="@+id/uah1" />
+        app:layout_constraintStart_toEndOf="@+id/rresult"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
