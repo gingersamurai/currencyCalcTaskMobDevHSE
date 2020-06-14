@@ -209,6 +209,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="3dp"
         android:layout_marginTop="268dp"
+        android:autoText="false"
+        android:clickable="false"
         android:text="0"
         app:layout_constraintStart_toEndOf="@+id/rresult"
         app:layout_constraintTop_toTopOf="parent" />
