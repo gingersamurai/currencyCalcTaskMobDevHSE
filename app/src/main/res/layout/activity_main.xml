@@ -43,7 +43,8 @@
                 android:id="@+id/rub2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="RUB" />
+                android:text="RUB"
+                android:textColor="#0B0B0B" />
 
             <Button
                 android:id="@+id/uah2"
