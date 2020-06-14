@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:accessibilityHeading="false"
-    android:background="#4DFF0008"
+    android:background="#D3586BD1"
     tools:context=".MainActivity">
 
     <TextView
@@ -40,6 +40,18 @@
             android:orientation="vertical">
 
             <Button
+                android:id="@+id/usd2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="USD" />
+
+            <Button
+                android:id="@+id/eur2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EUR" />
+
+            <Button
                 android:id="@+id/rub2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -52,17 +64,6 @@
                 android:layout_height="wrap_content"
                 android:text="UAH" />
 
-            <Button
-                android:id="@+id/eur2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="EUR" />
-
-            <Button
-                android:id="@+id/usd2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="USD" />
         </LinearLayout>
     </ScrollView>
 
@@ -86,18 +87,6 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/uah1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="UAH" />
-
-            <Button
-                android:id="@+id/rub1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="RUB" />
-
-            <Button
                 android:id="@+id/usd1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -108,6 +97,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="EUR" />
+
+            <Button
+                android:id="@+id/rub1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RUB" />
+
+            <Button
+                android:id="@+id/uah1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="UAH" />
+
         </LinearLayout>
     </ScrollView>
 
